@@ -17,8 +17,36 @@ console.log (`Average age: ${sum / ages.length}`) //displayed the average age by
 console.log ("#2------------------------------------------")
 let names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'];
 console.log (names);
-let totalLetters = 0
-for (let i = 0; i < names.length; i++) {
-    totalLetters += names[i].length;
+let totalLetters = 0 //created totalLetters variable as a global variable to use outside of the loop. Set to zero to start - will store the number of letters in each name
+for (let i = 0; i < names.length; i++) { //for loop to iterate through the names array
+    totalLetters += names[i].length; // adding the value for the length of each name into the totalLetters variable. names[i] goes through each name in the variable and .length checks the length of the value at each element.
 }
-console.log (totalLetters / names.length)
+
+console.log (`average number of letters per name: ${totalLetters / names.length}`); //console.log to show the average length of the names. Used variable declared earlier and divided by names.length to divide by the number of elements in the array.
+console.log ("b:")
+let newNames = '' //created global variable newNames to store concatenated names - set to an empty value using ' '. 
+for (let i = 0; i < names.length; i++) { //for loop to iterate through the names array.
+   newNames += (names[i] + " " ); // adding array values to newNames using += added a space by using + " " 
+}
+   console.log (newNames); //console.log of newNames variable.
+
+
+console.log ("#3---------------------------------------")
+console.log (`To access the last element of any array you use array.length - 1`)
+
+console.log ("#4-----------------------------------------")
+console.log ("to access the first element of any array you use array[0]")
+
+console.log ("#5------------------------------------------")
+let nameLengths = [];
+for (let i = 0; i < names.length; i++) {
+    nameLengths.push(names[i].length);
+}
+console.log (nameLengths);
+
+console.log("#6------------------------------------------")
+let nameSum = 0;
+for (let i = 0; i < nameLengths; i++) {
+    nameSum += nameLengths[i];
+}
+console.log (nameSum);
