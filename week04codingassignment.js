@@ -46,7 +46,49 @@ console.log (nameLengths);
 
 console.log("#6------------------------------------------")
 let nameSum = 0;
-for (let i = 0; i < nameLengths; i++) {
+for (let i = 0; i < nameLengths.length; i++) {
     nameSum += nameLengths[i];
 }
-console.log (nameSum);
+console.log (`Sum of all the elements in the nameLengths array: ${nameSum}`);
+
+console.log (`#7------------------------------------------`);
+const wordCombine = (word, n) => {
+    let finalCombo = '';
+    for (let i = 0; i < n; i++) {
+        finalCombo += word;
+    }
+    return finalCombo;
+}
+console.log (wordCombine('Hello', 3));
+
+console.log(`#8----------------------------------------`);
+let fullName = (firstName, lastName) => `${firstName} ${lastName}`
+console.log (fullName('Paul', 'Ryan'))
+
+console.log( `#9--------------------------------------`);
+
+let over100 = (array1) => {
+    let result = 0;    
+    for (let i = 0; i <array1.length; i++) {
+        result += array1[i];
+    }
+if (result > 100){
+    return true;
+    } else {
+        return false;
+    }
+}
+console.log(over100([4, 5, 6, 9, 10]));
+console.log(over100([80, 90, 100]));
+
+console.log (`#10-------------------------------------`);
+
+let arrayAverage = (array2) => {
+    let average = 0;
+    for (let i = 0; i < array2.length; i++) {
+    average += array2[i];
+    return average / array2.length ;
+}
+
+}
+console.log (arrayAverage([1, 2, 3, 10, 10]));
