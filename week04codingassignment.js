@@ -87,8 +87,48 @@ let arrayAverage = (array2) => {
     let average = 0;
     for (let i = 0; i < array2.length; i++) {
     average += array2[i];
-    return average / array2.length ;
-}
-
+    }
+return average / array2.length;
 }
 console.log (arrayAverage([1, 2, 3, 10, 10]));
+
+console.log(`#11------------------------------------`);
+let greaterAverage = (bigArray, smallArray) => {
+    let average1 = 0;
+    let average2 = 0;
+    let bigArrayAverage = 0;
+    let smallArrayAverage = 0;
+    
+    for (let i = 0; i < bigArray.length; i++) {
+    average1 += bigArray[i];
+    bigArrayAverage = average1 / bigArray.length;}
+
+    for (let i = 0; i < smallArray.length; i++) {
+    average2 += smallArray[i];
+    smallArrayAverage = average2 / smallArray.length;
+    }
+    
+        if (bigArrayAverage > smallArrayAverage) {
+        return true;
+        } else {
+        return false;
+      
+    }
+   
+}
+console.log(greaterAverage([3,4,7,10,5], [2, 5, 6]));
+console.log(greaterAverage([2,3], [3,4,5,7,8,6,7]));
+
+console.log(`#12------------------------------------`);
+let willBuyDrink = (isHotOutside, moneyInPocket) => {
+    if (isHotOutside === true && moneyInPocket > 10.50) {
+        return true;
+    }else {
+        return false;
+    }
+}
+console.log(willBuyDrink (true, 11));
+console.log(willBuyDrink(false, 12));
+console.log(willBuyDrink(true, 5));
+
+console.log (`#13--------------------------------`);
