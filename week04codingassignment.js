@@ -145,5 +145,5 @@ const timeToWorkOut = (timeAvaliable, motivated, workedOutYesterday) => {
 }
 timeToWorkOut(2, true, false)
 timeToWorkOut(.5, true, false)
- timeToWorkOut(2, false, false)
+timeToWorkOut(2, false, false)
 timeToWorkOut(2, true, true)
